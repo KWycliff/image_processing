@@ -1,6 +1,7 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
 "../../../../FIR_filter.ip_user_files/bd/fir_top_module/ip/fir_top_module_sim_clk_gen_0_0/sim/fir_top_module_sim_clk_gen_0_0.v" \
+"../../../../FIR_filter.ip_user_files/bd/fir_top_module/ip/fir_top_module_xlconstant_0_0/sim/fir_top_module_xlconstant_0_0.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

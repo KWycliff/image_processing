@@ -19,6 +19,8 @@ vlib activehdl/sim_clk_gen_v1_0_3
 vlib activehdl/c_reg_fd_v12_0_6
 vlib activehdl/xbip_addsub_v3_0_6
 vlib activehdl/c_addsub_v12_0_15
+vlib activehdl/fir_compiler_v7_2_19
+vlib activehdl/xlconstant_v1_1_7
 
 vcom -work xbip_utils_v3_0_10 -93  \
 "../../../../FIR_filter.gen/sources_1/bd/fir_top_module/ipshared/364f/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
@@ -51,10 +53,10 @@ vcom -work xil_defaultlib -93  \
 "../../../bd/fir_top_module/ip/fir_top_module_dds_compiler_0_0/sim/fir_top_module_dds_compiler_0_0.vhd" \
 "../../../bd/fir_top_module/ip/fir_top_module_dds_compiler_0_1/sim/fir_top_module_dds_compiler_0_1.vhd" \
 
-vlog -work sim_clk_gen_v1_0_3  -v2k5 -l xbip_utils_v3_0_10 -l axi_utils_v2_0_6 -l xbip_pipe_v3_0_6 -l xbip_bram18k_v3_0_6 -l mult_gen_v12_0_18 -l xbip_dsp48_wrapper_v3_0_4 -l xbip_dsp48_addsub_v3_0_6 -l xbip_dsp48_multadd_v3_0_6 -l dds_compiler_v6_0_22 -l xil_defaultlib -l sim_clk_gen_v1_0_3 -l c_reg_fd_v12_0_6 -l xbip_addsub_v3_0_6 -l c_addsub_v12_0_15 \
+vlog -work sim_clk_gen_v1_0_3  -v2k5 -l xbip_utils_v3_0_10 -l axi_utils_v2_0_6 -l xbip_pipe_v3_0_6 -l xbip_bram18k_v3_0_6 -l mult_gen_v12_0_18 -l xbip_dsp48_wrapper_v3_0_4 -l xbip_dsp48_addsub_v3_0_6 -l xbip_dsp48_multadd_v3_0_6 -l dds_compiler_v6_0_22 -l xil_defaultlib -l sim_clk_gen_v1_0_3 -l c_reg_fd_v12_0_6 -l xbip_addsub_v3_0_6 -l c_addsub_v12_0_15 -l fir_compiler_v7_2_19 -l xlconstant_v1_1_7 \
 "../../../../FIR_filter.gen/sources_1/bd/fir_top_module/ipshared/fda6/hdl/sim_clk_gen_v1_0_vl_rfs.v" \
 
-vlog -work xil_defaultlib  -v2k5 -l xbip_utils_v3_0_10 -l axi_utils_v2_0_6 -l xbip_pipe_v3_0_6 -l xbip_bram18k_v3_0_6 -l mult_gen_v12_0_18 -l xbip_dsp48_wrapper_v3_0_4 -l xbip_dsp48_addsub_v3_0_6 -l xbip_dsp48_multadd_v3_0_6 -l dds_compiler_v6_0_22 -l xil_defaultlib -l sim_clk_gen_v1_0_3 -l c_reg_fd_v12_0_6 -l xbip_addsub_v3_0_6 -l c_addsub_v12_0_15 \
+vlog -work xil_defaultlib  -v2k5 -l xbip_utils_v3_0_10 -l axi_utils_v2_0_6 -l xbip_pipe_v3_0_6 -l xbip_bram18k_v3_0_6 -l mult_gen_v12_0_18 -l xbip_dsp48_wrapper_v3_0_4 -l xbip_dsp48_addsub_v3_0_6 -l xbip_dsp48_multadd_v3_0_6 -l dds_compiler_v6_0_22 -l xil_defaultlib -l sim_clk_gen_v1_0_3 -l c_reg_fd_v12_0_6 -l xbip_addsub_v3_0_6 -l c_addsub_v12_0_15 -l fir_compiler_v7_2_19 -l xlconstant_v1_1_7 \
 "../../../bd/fir_top_module/ip/fir_top_module_sim_clk_gen_0_0/sim/fir_top_module_sim_clk_gen_0_0.v" \
 
 vcom -work c_reg_fd_v12_0_6 -93  \
@@ -69,6 +71,18 @@ vcom -work c_addsub_v12_0_15 -93  \
 vcom -work xil_defaultlib -93  \
 "../../../bd/fir_top_module/ip/fir_top_module_c_addsub_0_0/sim/fir_top_module_c_addsub_0_0.vhd" \
 "../../../bd/fir_top_module/sim/fir_top_module.vhd" \
+
+vcom -work fir_compiler_v7_2_19 -93  \
+"../../../../FIR_filter.gen/sources_1/bd/fir_top_module/ipshared/d2b0/hdl/fir_compiler_v7_2_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib -93  \
+"../../../bd/fir_top_module/ip/fir_top_module_fir_compiler_0_0/sim/fir_top_module_fir_compiler_0_0.vhd" \
+
+vlog -work xlconstant_v1_1_7  -v2k5 -l xbip_utils_v3_0_10 -l axi_utils_v2_0_6 -l xbip_pipe_v3_0_6 -l xbip_bram18k_v3_0_6 -l mult_gen_v12_0_18 -l xbip_dsp48_wrapper_v3_0_4 -l xbip_dsp48_addsub_v3_0_6 -l xbip_dsp48_multadd_v3_0_6 -l dds_compiler_v6_0_22 -l xil_defaultlib -l sim_clk_gen_v1_0_3 -l c_reg_fd_v12_0_6 -l xbip_addsub_v3_0_6 -l c_addsub_v12_0_15 -l fir_compiler_v7_2_19 -l xlconstant_v1_1_7 \
+"../../../../FIR_filter.gen/sources_1/bd/fir_top_module/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib  -v2k5 -l xbip_utils_v3_0_10 -l axi_utils_v2_0_6 -l xbip_pipe_v3_0_6 -l xbip_bram18k_v3_0_6 -l mult_gen_v12_0_18 -l xbip_dsp48_wrapper_v3_0_4 -l xbip_dsp48_addsub_v3_0_6 -l xbip_dsp48_multadd_v3_0_6 -l dds_compiler_v6_0_22 -l xil_defaultlib -l sim_clk_gen_v1_0_3 -l c_reg_fd_v12_0_6 -l xbip_addsub_v3_0_6 -l c_addsub_v12_0_15 -l fir_compiler_v7_2_19 -l xlconstant_v1_1_7 \
+"../../../bd/fir_top_module/ip/fir_top_module_xlconstant_0_0/sim/fir_top_module_xlconstant_0_0.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

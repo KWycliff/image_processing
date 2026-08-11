@@ -3,6 +3,7 @@ vhdl xil_defaultlib  \
 "../../../bd/fir_top_module/ip/fir_top_module_dds_compiler_0_1/sim/fir_top_module_dds_compiler_0_1.vhd" \
 "../../../bd/fir_top_module/ip/fir_top_module_c_addsub_0_0/sim/fir_top_module_c_addsub_0_0.vhd" \
 "../../../bd/fir_top_module/sim/fir_top_module.vhd" \
+"../../../bd/fir_top_module/ip/fir_top_module_fir_compiler_0_0/sim/fir_top_module_fir_compiler_0_0.vhd" \
 
 # Do not sort compile order
 nosort

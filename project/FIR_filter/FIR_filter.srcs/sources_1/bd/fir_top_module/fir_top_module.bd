@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x2284230D2284230D",
+      "boundary_crc": "0xE755E6E4E755E6E4",
       "device": "xc7s50csga324-1",
       "gen_directory": "../../../../FIR_filter.gen/sources_1/bd/fir_top_module",
       "name": "fir_top_module",
@@ -14,11 +14,17 @@
       "dds_500k": "",
       "dds_10M": "",
       "sim_clk_gen_0": "",
-      "c_addsub_0": ""
+      "c_addsub_0": "",
+      "fir_compiler_0": "",
+      "xlconstant_0": ""
     },
     "ports": {
-      "S_0": {
-        "type": "data",
+      "m_axis_data_tdata_0": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "add_sub_out": {
         "direction": "O",
         "left": "8",
         "right": "0",
@@ -35,41 +41,15 @@
           }
         }
       },
-      "S_1": {
-        "type": "data",
+      "signal_500k": {
         "direction": "O",
         "left": "7",
-        "right": "0",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": [
-              "xilinx.com:interface:datatypes:1.0 {",
-              "DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum",
-              "{} maximum {}} value 9} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format",
-              "bool minimum {} maximum {}} value TRUE}}}} DATA_WIDTH 9",
-              "}"
-            ],
-            "value_src": "default"
-          }
-        }
+        "right": "0"
       },
-      "S_2": {
-        "type": "data",
+      "signal_10Mhz": {
         "direction": "O",
         "left": "7",
-        "right": "0",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": [
-              "xilinx.com:interface:datatypes:1.0 {",
-              "DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum",
-              "{} maximum {}} value 9} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format",
-              "bool minimum {} maximum {}} value TRUE}}}} DATA_WIDTH 9",
-              "}"
-            ],
-            "value_src": "default"
-          }
-        }
+        "right": "0"
       }
     },
     "components": {
@@ -153,27 +133,93 @@
             "value": "9"
           }
         }
+      },
+      "fir_compiler_0": {
+        "vlnv": "xilinx.com:ip:fir_compiler:7.2",
+        "xci_name": "fir_top_module_fir_compiler_0_0",
+        "xci_path": "ip\\fir_top_module_fir_compiler_0_0\\fir_top_module_fir_compiler_0_0.xci",
+        "inst_hier_path": "fir_compiler_0",
+        "parameters": {
+          "Clock_Frequency": {
+            "value": "100"
+          },
+          "CoefficientVector": {
+            "value": [
+              "-477, -92, -80, -51, -4, 63, 151, 259, 387, 533, 693, 863, 1039, 1215, 1386, 1546, 1689, 1810, 1906, 1972, 2005, 2005, 1972, 1906, 1810, 1689, 1546, 1386, 1215, 1039, 863, 693, 533, 387, 259, 151, 63,",
+              "-4, -51, -80, -92, -477"
+            ]
+          },
+          "Coefficient_Fractional_Bits": {
+            "value": "0"
+          },
+          "Coefficient_Sets": {
+            "value": "1"
+          },
+          "Coefficient_Sign": {
+            "value": "Signed"
+          },
+          "Coefficient_Structure": {
+            "value": "Inferred"
+          },
+          "Coefficient_Width": {
+            "value": "16"
+          },
+          "ColumnConfig": {
+            "value": "21"
+          },
+          "Data_Width": {
+            "value": "9"
+          },
+          "Filter_Architecture": {
+            "value": "Systolic_Multiply_Accumulate"
+          },
+          "Output_Rounding_Mode": {
+            "value": "Full_Precision"
+          },
+          "Output_Width": {
+            "value": "25"
+          },
+          "Quantization": {
+            "value": "Integer_Coefficients"
+          },
+          "Sample_Frequency": {
+            "value": "100"
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "fir_top_module_xlconstant_0_0",
+        "xci_path": "ip\\fir_top_module_xlconstant_0_0\\fir_top_module_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0"
       }
     },
     "nets": {
       "c_addsub_0_S": {
         "ports": [
           "c_addsub_0/S",
-          "S_0"
+          "fir_compiler_0/s_axis_data_tdata",
+          "add_sub_out"
         ]
       },
       "dds_10M_m_axis_data_tdata": {
         "ports": [
           "dds_10M/m_axis_data_tdata",
           "c_addsub_0/A",
-          "S_2"
+          "signal_10Mhz"
         ]
       },
       "dds_500k_m_axis_data_tdata": {
         "ports": [
           "dds_500k/m_axis_data_tdata",
           "c_addsub_0/B",
-          "S_1"
+          "signal_500k"
+        ]
+      },
+      "fir_compiler_0_m_axis_data_tdata": {
+        "ports": [
+          "fir_compiler_0/m_axis_data_tdata",
+          "m_axis_data_tdata_0"
         ]
       },
       "sim_clk_gen_0_clk": {
@@ -181,7 +227,14 @@
           "sim_clk_gen_0/clk",
           "dds_10M/aclk",
           "dds_500k/aclk",
-          "c_addsub_0/CLK"
+          "c_addsub_0/CLK",
+          "fir_compiler_0/aclk"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "fir_compiler_0/s_axis_data_tvalid"
         ]
       }
     }

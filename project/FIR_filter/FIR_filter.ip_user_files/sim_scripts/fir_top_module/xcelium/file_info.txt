@@ -16,4 +16,8 @@ xbip_addsub_v3_0_vh_rfs.vhd,vhdl,xbip_addsub_v3_0_6,../../../../FIR_filter.gen/s
 c_addsub_v12_0_vh_rfs.vhd,vhdl,c_addsub_v12_0_15,../../../../FIR_filter.gen/sources_1/bd/fir_top_module/ipshared/6b20/hdl/c_addsub_v12_0_vh_rfs.vhd,
 fir_top_module_c_addsub_0_0.vhd,vhdl,xil_defaultlib,../../../bd/fir_top_module/ip/fir_top_module_c_addsub_0_0/sim/fir_top_module_c_addsub_0_0.vhd,
 fir_top_module.vhd,vhdl,xil_defaultlib,../../../bd/fir_top_module/sim/fir_top_module.vhd,
+fir_compiler_v7_2_vh_rfs.vhd,vhdl,fir_compiler_v7_2_19,../../../../FIR_filter.gen/sources_1/bd/fir_top_module/ipshared/d2b0/hdl/fir_compiler_v7_2_vh_rfs.vhd,
+fir_top_module_fir_compiler_0_0.vhd,vhdl,xil_defaultlib,../../../bd/fir_top_module/ip/fir_top_module_fir_compiler_0_0/sim/fir_top_module_fir_compiler_0_0.vhd,
+xlconstant_v1_1_vl_rfs.v,verilog,xlconstant_v1_1_7,../../../../FIR_filter.gen/sources_1/bd/fir_top_module/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v,
+fir_top_module_xlconstant_0_0.v,verilog,xil_defaultlib,../../../bd/fir_top_module/ip/fir_top_module_xlconstant_0_0/sim/fir_top_module_xlconstant_0_0.v,
 glbl.v,Verilog,xil_defaultlib,glbl.v

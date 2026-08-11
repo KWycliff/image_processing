@@ -15,6 +15,8 @@ vlib questa_lib/msim/sim_clk_gen_v1_0_3
 vlib questa_lib/msim/c_reg_fd_v12_0_6
 vlib questa_lib/msim/xbip_addsub_v3_0_6
 vlib questa_lib/msim/c_addsub_v12_0_15
+vlib questa_lib/msim/fir_compiler_v7_2_19
+vlib questa_lib/msim/xlconstant_v1_1_7
 
 vmap xbip_utils_v3_0_10 questa_lib/msim/xbip_utils_v3_0_10
 vmap axi_utils_v2_0_6 questa_lib/msim/axi_utils_v2_0_6
@@ -30,6 +32,8 @@ vmap sim_clk_gen_v1_0_3 questa_lib/msim/sim_clk_gen_v1_0_3
 vmap c_reg_fd_v12_0_6 questa_lib/msim/c_reg_fd_v12_0_6
 vmap xbip_addsub_v3_0_6 questa_lib/msim/xbip_addsub_v3_0_6
 vmap c_addsub_v12_0_15 questa_lib/msim/c_addsub_v12_0_15
+vmap fir_compiler_v7_2_19 questa_lib/msim/fir_compiler_v7_2_19
+vmap xlconstant_v1_1_7 questa_lib/msim/xlconstant_v1_1_7
 
 vcom -work xbip_utils_v3_0_10  -93  \
 "../../../../FIR_filter.gen/sources_1/bd/fir_top_module/ipshared/364f/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
@@ -80,6 +84,18 @@ vcom -work c_addsub_v12_0_15  -93  \
 vcom -work xil_defaultlib  -93  \
 "../../../bd/fir_top_module/ip/fir_top_module_c_addsub_0_0/sim/fir_top_module_c_addsub_0_0.vhd" \
 "../../../bd/fir_top_module/sim/fir_top_module.vhd" \
+
+vcom -work fir_compiler_v7_2_19  -93  \
+"../../../../FIR_filter.gen/sources_1/bd/fir_top_module/ipshared/d2b0/hdl/fir_compiler_v7_2_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib  -93  \
+"../../../bd/fir_top_module/ip/fir_top_module_fir_compiler_0_0/sim/fir_top_module_fir_compiler_0_0.vhd" \
+
+vlog -work xlconstant_v1_1_7  -incr -mfcu  \
+"../../../../FIR_filter.gen/sources_1/bd/fir_top_module/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib  -incr -mfcu  \
+"../../../bd/fir_top_module/ip/fir_top_module_xlconstant_0_0/sim/fir_top_module_xlconstant_0_0.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"
