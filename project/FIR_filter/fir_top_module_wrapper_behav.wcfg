@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="fir_top_module_wrapper_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="fir_top_module_wrapper" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="2,300.001 ns"></ZoomEndTime>
+      <Cursor1Time time="2,300.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="255"></NameColumnWidth>
+      <ValueColumnWidth column_width="196"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="4" />
+   <wvobject fp_name="/fir_top_module_wrapper/signal_10Mhz" type="array">
+      <obj_property name="ElementShortName">signal_10Mhz[7:0]</obj_property>
+      <obj_property name="ObjectShortName">signal_10Mhz[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fir_top_module_wrapper/signal_500k" type="array">
+      <obj_property name="ElementShortName">signal_500k[7:0]</obj_property>
+      <obj_property name="ObjectShortName">signal_500k[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fir_top_module_wrapper/add_sub_out" type="array">
+      <obj_property name="ElementShortName">add_sub_out[8:0]</obj_property>
+      <obj_property name="ObjectShortName">add_sub_out[8:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fir_top_module_wrapper/m_axis_data_tdata_0" type="array">
+      <obj_property name="ElementShortName">m_axis_data_tdata_0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tdata_0[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+</wave_config>

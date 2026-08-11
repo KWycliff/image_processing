@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/repositories/image_processing/project/FIR_filter/FIR_filter.ip_user_files/bd/fir_top_module/sim/fir_top_module.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fir_top_module'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/repositories/image_processing/project/FIR_filter/FIR_filter.gen/sources_1/bd/fir_top_module/hdl/fir_top_module_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fir_top_module_wrapper'
